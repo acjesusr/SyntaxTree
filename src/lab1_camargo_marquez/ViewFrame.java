@@ -253,8 +253,6 @@ public class ViewFrame extends javax.swing.JFrame {
                 posData[i-1][0] = temp.toString();
                 posData[i-1][1] = Integer.toString(i);
                 posData[i-1][2] = temp.getFollowPos().toString();
-            }else{
-                System.out.println("id " + i + " not exist");
             }
         }
         posTable.setModel(new DefaultTableModel(posData,posColumnNames));
@@ -287,7 +285,7 @@ public class ViewFrame extends javax.swing.JFrame {
                 }
             }
         }
-        System.out.println("leaves: " + st.getLeaves());
+        //System.out.println("leaves: " + st.getLeaves());
         dfaTable.setModel(new DefaultTableModel(dfaData,dfaColumnNames));
         
         verifyButton.setEnabled(true);
@@ -296,7 +294,7 @@ public class ViewFrame extends javax.swing.JFrame {
         tView.setBackground(this.getBackground());
         tView.setPreferredSize(d);
         //tView.setSize(d);
-        System.out.println(tView.getPreferredSize() + " x: " + ((tView.getWidth()*4/5)+st.levels*15)*st.levels + " y: " + st.levels*50);
+        //System.out.println(tView.getPreferredSize() + " x: " + ((tView.getWidth()*4/5)+st.levels*15)*st.levels + " y: " + st.levels*50);
         /*Graphics g =treePanel.getGraphics(); 
         g.clearRect(0, 0, treePanel.getWidth(), treePanel.getHeight());
         g.drawRect(0, 0, treePanel.getWidth()-1, treePanel.getHeight()-1);

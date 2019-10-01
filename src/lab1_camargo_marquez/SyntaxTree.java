@@ -228,7 +228,7 @@ public class SyntaxTree {
                 break;
 
             default:
-                System.out.println("Default case: " + c);
+                //System.out.println("Default case: " + c);
                 nodes--;
         }
         /*System.out.println("Node: " + t.getStr());
