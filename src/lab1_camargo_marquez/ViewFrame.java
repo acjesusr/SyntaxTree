@@ -267,7 +267,7 @@ public class ViewFrame extends javax.swing.JFrame {
         for (int i = 0; i < dfaData.length; i++) {
             ArrayList<Integer> t = (ArrayList)dfa.getdStates().get(i)[1];
             dfaData[i][0] = t.contains(st.getLeaves()) ?
-                    dfa.getdStates().get(i)[0].toString()+"->" :
+                    dfa.getdStates().get(i)[0].toString()+"*" :
                     dfa.getdStates().get(i)[0].toString();
             dfaData[i][0] = dfa.getdStates().get(i)[0].toString().equals("s0") ?
                     "->"+dfaData[i][0]:
