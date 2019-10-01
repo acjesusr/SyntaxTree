@@ -273,7 +273,7 @@ public class ViewFrame extends javax.swing.JFrame {
                     "->"+dfaData[i][0]:
                     dfaData[i][0];
             dfaData[i][1] = t.toString();
-            ArrayList<String[]> transitions = dfa.getdTran().get(dfaData[i][0]);
+            ArrayList<String[]> transitions = dfa.getdTran().get(dfa.getdStates().get(i)[0].toString());
             for (int j = st.getAlphabet().contains("&")? 1 : 0; j < st.getAlphabet().size(); j++) {
                 String str = st.getAlphabet().get(j);
                 if (transitions != null) {
