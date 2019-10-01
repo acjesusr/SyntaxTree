@@ -111,26 +111,26 @@ public class DFA {
         boolean res = false;
         String state = "s0";
         for (int i = 0; i < str.length(); i++) {
-            if (st.getAlphabet().contains(str.charAt(i)+"")) {
-                if (str.charAt(i) != '&') {
-                    ArrayList<String[]> transitions = dTran.get(state);
-                    if (transitions != null) {
-                        boolean noTransition = true;
-                        for (String[] transition : transitions) {
-                            if (transition[0].equals(str.charAt(i)+"")) {
-                                state = transition[1];
-                                noTransition = false;
+            if (str.charAt(i) != '&') {
+                if (st.getAlphabet().contains(str.charAt(i)+"")) {
+                        ArrayList<String[]> transitions = dTran.get(state);
+                        if (transitions != null) {
+                            boolean noTransition = true;
+                            for (String[] transition : transitions) {
+                                if (transition[0].equals(str.charAt(i)+"")) {
+                                    state = transition[1];
+                                    noTransition = false;
+                                }
                             }
-                        }
-                        if (noTransition) {
+                            if (noTransition) {
+                                return false;
+                            }
+                        }else{
                             return false;
                         }
-                    }else{
-                        return false;
-                    }
+                }else{
+                    return false;
                 }
-            }else{
-                return false;
             }
         }
         for (Object[] dState : dStates) {

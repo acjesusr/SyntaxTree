@@ -93,9 +93,7 @@ public class SyntaxTree {
                    t.getLastPos().add(t.getId());
                }
                if (!alphabet.contains(t.toString()) && !t.toString().equals("#")) {
-                   if (t.toString().equals("&")) {
-                       alphabet.add(0, "&");
-                   }else{
+                   if (!t.toString().equals("&")) {
                        alphabet.add(t.toString());
                    }
                 }
@@ -155,9 +153,9 @@ public class SyntaxTree {
                     SyntaxTree.getNodeById(i, t).getFollowPos().addAll(t.getFirstPos());
                     Collections.sort(SyntaxTree.getNodeById(i, t).getFollowPos());
                 });
-                if (!alphabet.contains("&")) {
+                /*if (!alphabet.contains("&")) {
                     alphabet.add(0, "&");
-                }
+                }*/
                 stack.add(t);
                 break;
             case '+':
@@ -180,9 +178,9 @@ public class SyntaxTree {
                 t.setNullable(true);
                 t.getFirstPos().addAll(l.getFirstPos());
                 t.getLastPos().addAll(l.getLastPos());
-                if (!alphabet.contains("&")) {
+                /*if (!alphabet.contains("&")) {
                     alphabet.add(0, "&");
-                }
+                }*/
                 Collections.sort(t.getFirstPos());
                 Collections.sort(t.getLastPos());
                 stack.add(t);

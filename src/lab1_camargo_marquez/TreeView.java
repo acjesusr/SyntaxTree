@@ -43,7 +43,7 @@ public class TreeView extends JPanel{
                 g.drawLine(p0.x, p0.y, p1.x, p1.y);
             }
             if (root.getRight() != null){
-                displayTree(g,root.getLeft(),offset-1,new Point(p1.x, p1.y),new Point(p1.x-(st.levels*10-(st.levels-offset)*8),p1.y+50));
+                displayTree(g,root.getLeft(),offset-1,new Point(p1.x, p1.y),new Point(p1.x-(st.levels*10-(st.levels-offset)*5),p1.y+50));
                 displayTree(g,root.getRight(),offset-1,new Point(p1.x, p1.y),new Point(p1.x+(st.levels*10-(st.levels-offset)*8),p1.y+50));
             }else{
                 displayTree(g,root.getLeft(),offset-1,new Point(p1.x, p1.y),new Point(p1.x,p1.y+50));

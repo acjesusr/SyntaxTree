@@ -304,12 +304,12 @@ public class ViewFrame extends javax.swing.JFrame {
         treeScrollPane.setViewportView(tView);
         SwingUtilities.invokeLater(() -> {
             //treeScrollPane.setViewport(tView);
-            treeScrollPane.getViewport().setViewPosition(new Point(5*tView.getWidth()/6,0));
+            treeScrollPane.getViewport().setViewPosition(new Point((4*tView.getWidth()/5)-treeScrollPane.getWidth()/2,0));
             /*treeScrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
             treeScrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);*/
             //treeScrollPane.validate();
             //System.out.println("scroll " + treeScrollPane.getPreferredSize());
-            treeScrollPane.revalidate();
+            //treeScrollPane.revalidate();
         });
     }//GEN-LAST:event_regexButtonActionPerformed
 
